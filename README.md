@@ -1,3 +1,3 @@
-# ACF Field: Enhanced Link
+# ACF Field: Visual Select
 
-An enhanced link field for Advanced Custom Fields Pro.
+An image-based selection field for Advanced Custom Fields Pro.
