@@ -96,8 +96,15 @@ class acf_field_visual_select extends acf_field_radio {
       $output .= '<input ' . acf_esc_attr( $atts ) . '/>';
 
       if ( ! empty( $image ) ) {
+        $find = array(
+          'theme_uri/',
+        );
+        $replace = array(
+          get_stylesheet_directory_uri() . '/',
+        );
+
         $img_atts = array(
-          'src' => $image,
+          'src' => str_ireplace( $find, $replace, $image ),
           'alt' => $label,
         );
 
@@ -130,7 +137,7 @@ class acf_field_visual_select extends acf_field_radio {
 
     acf_render_field_setting( $field, array(
       'label' => __('Choices','acf'),
-      'instructions' => __('Enter each choice on a new line.','acf') . '<br /><br />' . __('For more control, you may specify both a value and label like this:','acf'). '<br /><br />' . __('red : Red','acf'),
+      'instructions' => __('Enter each choice on a new line using the following format:.','acf') . '<br /><br />' . __('option1 : Option 1 [theme_uri/path/to/image_1.jpg]','acf'),
       'type' => 'textarea',
       'name' => 'choices',
     ));
