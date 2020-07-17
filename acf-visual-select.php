@@ -3,7 +3,7 @@
 Plugin Name: Advanced Custom Fields: Visual Select Field
 Plugin URI: https://github.com/benplum/ACF-Field-Visual-Select
 Description: An image-based selection field for Advanced Custom Fields Pro.
-Version: 1.0.2
+Version: 1.0.3
 Author: Ben Plum
 Author URI: https://benplum.com
 License: GPLv2 or later
